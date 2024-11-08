@@ -18,10 +18,12 @@ export const SkillTopic: React.FC<ISkillTopicProps> = ({
     otherSkills = ", " + otherSkills;
   }
   return (
-    <div>
-      <span className="font-semibold">{skillTopic.topic[lang]}</span>:{" "}
-      <span>{topSkills}</span>
-      <span className="text-slate-400">{otherSkills}</span>
-    </div>
+    <>
+      <div className="font-semibold pr-4">{skillTopic.topic[lang]}</div>
+      <div>
+        <span>{topSkills}</span>
+        <span className="text-slate-400">{otherSkills}</span>
+      </div>
+    </>
   );
 };

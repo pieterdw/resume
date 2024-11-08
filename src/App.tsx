@@ -20,8 +20,8 @@ function App() {
 
   return (
     <>
-      <div className="md:my-5 md:mx-5 lg:my-10 lg:mx-auto lg:w-[960px] md:rounded-2xl px-7 py-6 text-left text-slate-700 shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0">
-        <div className="float-right print:hidden">
+      <div className="md:my-5 md:mx-5 lg:my-10 lg:mx-auto lg:w-[1024px] md:rounded-2xl px-7 py-6 text-left text-slate-700 shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0 leading-relaxed">
+        <div className="text-right md:float-right print:hidden">
           {lang == "en" ? (
             <span className="font-bold">EN</span>
           ) : (
@@ -46,18 +46,18 @@ function App() {
             </a>
           )}
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left print:flex-row print:items-start print:text-left gap-6 print:gap-8">
           <img
             src="pieter.jfif"
             alt="Pieter De Witte"
-            className="w-[80px] h-[80px] rounded-full print:w-[100px] print:h-[100px]"
+            className="w-[90px] h-[90px] rounded-full"
           />
           <div>
-            <h1 className="text-2xl font-bold text-cyan-700">{d.main.name}</h1>
-            <p className="text-slate-800">
+            <h1 className="text-3xl font-bold text-cyan-700">{d.main.name}</h1>
+            <p className="text-lg text-slate-800">
               Senior Full Stack Developer & Manager
             </p>
-            <p className="text-sm text-slate-500">
+            <p className="text-slate-500">
               {d.main.address[lang]}
               {separator}
               <a
@@ -99,9 +99,11 @@ function App() {
           </div>
         </div>
         <Section title={d.ui.skillsTitle[lang]}>
-          {d.skills.map((s) => (
-            <SkillTopic skillTopic={s} lang={lang} />
-          ))}
+          <div className="md:grid print:grid grid-cols-[max-content_auto]">
+            {d.skills.map((s) => (
+              <SkillTopic skillTopic={s} lang={lang} />
+            ))}
+          </div>
         </Section>
         <Section title={d.ui.experienceTitle[lang]}>
           {d.experience.map((e) => (

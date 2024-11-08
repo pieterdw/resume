@@ -6,10 +6,10 @@ export interface ISectionProps {
 export const Section: React.FC<ISectionProps> = ({ title, children }) => {
   return (
     <>
-      <h2 className="mt-6 text-l font-semibold text-cyan-700 uppercase tracking-wide pb-2 border-b-[1px] border-slate-200">
+      <h2 className="mt-10 text-l font-semibold text-cyan-700 uppercase tracking-wide pb-3 border-b-[1px] border-slate-200">
         {title}
       </h2>
-      <div className="my-2">{children}</div>
+      <div className="my-4">{children}</div>
     </>
   );
 };

@@ -8,6 +8,7 @@ export interface IResumeData {
     websiteUrl: string;
     linkedInUrl: string;
   };
+  about: ITranslatable;
   skills: ISkillTopic[];
   experience: IExperience[];
   ui: {
@@ -49,6 +50,10 @@ export const resumeData: IResumeData = {
     websiteUrl: "straffekoffie.com/pieter",
     linkedInUrl: "linkedin.com/in/pieterdw",
   },
+  about: {
+    en: "",
+    nl: "",
+  },
   skills: [
     {
       topic: { en: "Programming Languages", nl: "Programmeertalen" },
@@ -59,10 +64,10 @@ export const resumeData: IResumeData = {
       topic: { en: "Frontend Technologies", nl: "Frontend technologiën" },
       topSkills: [
         "ReactJS",
-        "SolidJS",
         "HTML",
         "CSS",
         "SASS",
+        "SolidJS",
         "Tailwind",
         "Vite",
         "Parcel",
@@ -91,10 +96,9 @@ export const resumeData: IResumeData = {
         "Amazon CloudFront",
         "Amazon EC2",
         "Cloudflare",
-        "Docker",
         "DNS Configuration",
       ],
-      otherSkills: ["Azure", "Kubernetes", "Jenkins"],
+      otherSkills: ["Docker", "Azure"],
     },
     {
       topic: { en: "Software", nl: "Software" },
@@ -132,10 +136,7 @@ export const resumeData: IResumeData = {
       topic: { en: "Languages", nl: "Talen" },
       language: "en",
       topSkills: ["Dutch (native speaker)", "English (fluent)"],
-      otherSkills: [
-        "French (basic understanding)",
-        "German (basic understanding)",
-      ],
+      otherSkills: ["French (basic)", "German (basic)"],
     },
     {
       topic: { en: "Languages", nl: "Talen" },
@@ -152,7 +153,7 @@ export const resumeData: IResumeData = {
       timespan: { en: "March 2021 - Present", nl: "Maart 2021 - Nu" },
       highlights: [
         {
-          en: "Lead a global cross-functional team of 17 software developers and QA engineers from three continents",
+          en: "Lead a global cross-functional team of 17 software developers and QA engineers based in three continents",
           nl: "Leiding gegeven aan een multidiciplinair team van 17 softwareontwikkelaars en QA engineers",
         },
         {
@@ -187,14 +188,14 @@ export const resumeData: IResumeData = {
         en: "Turnhout, Belgium - Acquired by Medallia",
         nl: "Turnhout, België - Overgenomen door Medallia",
       },
-      jobTitle: "Software Developer & IT Project Manager",
+      jobTitle: "Senior Software Developer & Project Manager",
       timespan: {
         en: "April 2017 - March 2021",
         nl: "April 2017 - March 2021",
       },
       highlights: [
         {
-          en: "Designed and built flexible reporting solution giving clients full flexibility in building reports that show the most important information, while matching their house style",
+          en: "Designed and built flexible reporting solution giving clients full flexibility in building reports that show the most important information, matching their house style",
           nl: "",
         },
         {
