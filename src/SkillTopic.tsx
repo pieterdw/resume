@@ -1,4 +1,4 @@
-import { IExperience, ISkillTopic, TranslatableKey } from "./resumeData";
+import { ISkillTopic, TranslatableKey } from "./resumeData";
 
 export interface ISkillTopicProps {
   skillTopic: ISkillTopic;
