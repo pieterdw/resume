@@ -21,6 +21,7 @@ export interface IResumeData {
     recommendationsTitle: ITranslatable;
     languageToggle: ITranslatable;
     readMore: ITranslatable;
+    downloadAsPdf: ITranslatable;
   };
 }
 
@@ -37,6 +38,7 @@ export type TranslatableKey = keyof ITranslatable;
 
 export interface IExperience {
   business: string;
+  businessDescription: ITranslatable;
   location: ITranslatable;
   timespan: ITranslatable;
   jobTitle: ITranslatable;
@@ -71,19 +73,13 @@ export const resumeData: IResumeData = {
   },
   intro: {
     en: `Well-rounded full stack web engineer with extensive experience in defining, designing, developing, deploying, maintaining, and managing web-based applications. Over 23 years of experience in web development. Self-motivated, self-taught, dedicated, and results-oriented. Proved myself in startup and enterprise environments. Collaborative and humble attitude, ready to work in lead role or as individual contributor.
-Experience combining different roles: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, architect, team leader, people manager, devops engineer, product owner, etc. Used to working closely with other teams and clients to deliver high quality products.
-Released first standalone website in 2001, at the age of 14. Started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables. Since then, building apps has been my life. I'm eager to learn new things and help grow businesses.`,
-    /*
-I am a full stack web engineer, with a passion for designing and building web apps that people love.
-I released my first standalone website in 2001, at the age of 14. I started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables.  Ever since, building apps has been a hobby, and later my profession.
-I love building apps and features that make a difference. I think further than the specs and create solutions that clients love. I like to collaborate with other engineers to merge different perspectives into a great product.
-Throughout my career I have worn multiple hats: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, architect, team leader, people manager, devops engineer, client advocate, etc. 
-I'm eager to learn new things and help grow the business wherever possible.`,*/
-    nl: `Ik ben een full stack web engineer, met een passie voor het ontwerpen en bouwen van webapps waar mensen van houden.
-In 2001, op 14-jarige leeftijd, heb ik mijn eerste website gelanceerd. Ik begon met het bouwen van websites op GeoCities toen geanimeerde gifs nog trendy waren en afgeronde hoeken in HTML met afbeeldingen werden gemaakt. Sindsdien is het bouwen van apps een hobby en later mijn beroep geworden.
-Ik hou ervan om apps te bouwen die een een impact hebben. Ik denk verder dan de specificaties en creëer oplossingen waar klanten dol op zijn. Ik werk graag samen met andere engineers om verschillende perspectieven samen te voegen tot een geweldig product.
-Gedurende mijn carrière heb ik meerdere rollen uitgevoerd: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, client advocate, enz.
-Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
+Experience combining different roles: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, software architect, team leader, people manager, devops engineer, product owner, etc. Used to working closely with other teams and clients to deliver high quality products.
+Released first standalone website in 2001, at the age of 14. Started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables. Ever since, building apps has been a passion. 
+Always eager to learn new things and help grow businesses.`,
+    nl: `Veelzijdige full stack web engineer met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webgebaseerde applicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Uitgebreide ervaring in startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
+Ervaring met het combineren van verschillende rollen: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, product owner, etc. Gewend om nauw samen te werken met andere teams en klanten om producten van hoge kwaliteit op te leveren.
+Eerste zelfstandige website uitgebracht in 2001, op 14-jarige leeftijd. Begonnen met het bouwen van websites op GeoCities, toen animated gifs trendy waren en afgeronde hoeken werden gemaakt door afbeeldingen in HTML-tabellen te plaatsen. Sindsdien is het bouwen van apps een passie. 
+Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
 `,
   },
   skills: [
@@ -99,12 +95,12 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
         "HTML",
         "CSS",
         "SASS",
-        "SolidJS",
         "Tailwind",
+        "SolidJS",
         "Vite",
         "Parcel",
       ],
-      otherSkills: ["NextJS", "Angular", "Webpack"],
+      otherSkills: ["Accessibility", "NextJS", "Angular", "Webpack"],
     },
     {
       topic: { en: "Backend Technologies", nl: "Backend technologiën" },
@@ -115,7 +111,6 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
         "Classic ASP",
         "Razor Pages",
         "ASP.NET MVC",
-        "Redis",
         "Dapper",
       ],
       otherSkills: [],
@@ -129,6 +124,7 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
         "Amazon EC2",
         "Cloudflare",
         "DNS Configuration",
+        "Redis",
       ],
       otherSkills: ["Docker", "Azure"],
     },
@@ -137,9 +133,9 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
       topSkills: [
         "Visual Studio Code",
         "Visual Studio",
-        "Git",
         "Jira",
         "Azure DevOps",
+        "Git",
         "Sentry",
         "Adobe Photoshop",
         "SQL Server Management Studio",
@@ -149,7 +145,7 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
         "GitHub",
         "GitLab",
       ],
-      otherSkills: ["JMeter", "Adobe Illustrator"],
+      otherSkills: ["JMeter", "Adobe Illustrator", "Subversion"],
     },
     {
       topic: { en: "Soft Skills", nl: "Soft skills" },
@@ -180,6 +176,10 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
   experience: [
     {
       business: "Medallia",
+      businessDescription: {
+        en: "Silicon Valley enterprise, providing the #1 enterprise experience platform for mission critical insights and action",
+        nl: "Silicon Valley enterprise met het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten",
+      },
       location: { en: "USA (Remote)", nl: "USA (Thuiswerk)" },
       jobTitle: {
         en: "Senior Staff Software Engineer & Manager",
@@ -197,28 +197,32 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
         },
         {
           en: "Worked with executives and other teams to plan and execute ambitious roadmap",
-          nl: "Samenwerking met management en andere teams om een ambitieuze roadmap te plannen en uit te voeren",
+          nl: "Samenwerking met management en andere teams om ambitieuze roadmap te plannen en uit te voeren",
         },
         {
-          en: "Created a tool to automate a number of repetitive, error-prone tasks for all engineers",
-          nl: "",
+          en: "Created tool to automate multiple repetitive, error-prone tasks for all engineers",
+          nl: "Tool gemaakt om een aantal repetitieve, foutgevoelige taken voor ontwikkelaars te automatiseren",
         },
         {
-          en: "Developed high volume email solution to unify email patterns and improve scalability",
-          nl: "",
+          en: "Developed high volume email solution to unify email workflows and improve scalability",
+          nl: "Oplossing ontwikkeld voor grote e-mailvolumes, om e-mail workflows te stroomlijnen en de schaalbaarheid te verbeteren",
         },
         {
           en: "Provided mentorship to team members, coaching them to improve code quality and speed",
-          nl: "",
+          nl: "Mentor en coach voor teamleden, met focus op verbeteren van code-kwaliteit en snelheid",
         },
         {
           en: "Improved software stability and reduced customer reported incidents by 40%",
-          nl: "",
+          nl: "Verbetering stabiliteit software, escalaties door klanten verminderd met 40%",
         },
       ],
     },
     {
       business: "CheckMarket",
+      businessDescription: {
+        en: "Powerful survey software aimed at enterprises",
+        nl: "Krachtige enquêtesoftware voor grote bedrijven",
+      },
       location: {
         en: "Turnhout, Belgium - Acquired by Medallia",
         nl: "Turnhout, België - Overgenomen door Medallia",
@@ -266,6 +270,10 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
     },
     {
       business: "BMI Leisure",
+      businessDescription: {
+        en: "World leader in karting and entertainment center software",
+        nl: "Wereldleider in software voor kartings en entertainment centers",
+      },
       location: {
         en: "Geel, Belgium",
         nl: "Geel, België",
@@ -303,13 +311,17 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
     },
     {
       business: "Straffe Koffie",
+      businessDescription: {
+        en: "Self employed secondary occupation, creating websites and solutions for local businesses",
+        nl: "Zelfstandige in bijberoep, maken van websites en oplossingen voor lokale bedrijven",
+      },
       location: {
         en: "Oud-Turnhout, Belgium",
         nl: "Oud-Turnhout, België",
       },
       jobTitle: {
-        en: "Website developer - Self employed secondary occupation",
-        nl: "Website-ontwikkelaar - Zelfstandig in bijberoep",
+        en: "Website developer",
+        nl: "Website-ontwikkelaar",
       },
       timespan: {
         en: "2008 - Present",
@@ -329,14 +341,19 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
           nl: "easter egg",
         },
         {
-          en: `Example: gevelrenovatiesvandun.be: website (incl. logo design) for local construction business`,
+          en: `Example: gevelrenovatiesvandun.be: website and logo for local construction business`,
           nl: "",
           url: "https://gevelrenovatiesvandun.be/",
         },
         {
-          en: "Example: justfoods.be: multilingual website for a organic food producer",
+          en: "Example: justfoods.be: multilingual website for organic food producer",
           nl: "",
           url: "https://justfoods.be/",
+        },
+        {
+          en: "Example: barzoen.cafe: website for local bar/restaurant",
+          nl: "",
+          url: "https://barzoen.cafe/",
         },
       ],
     },
@@ -344,9 +361,13 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
   education: [
     {
       business: "Thomas More University of Applied Sciences",
+      businessDescription: {
+        en: "",
+        nl: "",
+      },
       location: { en: "Geel, Belgium", nl: "Geel, België" },
       jobTitle: {
-        en: "Bachelor Applied Computer Sciences - Graduated Summa Cum Laude (With Highest Praise)",
+        en: "Bachelor Applied Computer Sciences - Summa Cum Laude (With Highest Praise)",
         nl: "Bachelor Toegepaste Informatica - Afgestudeerd met grootste onderscheiding",
       },
       timespan: { en: "2006 - 2009", nl: "2006 - 2009" },
@@ -445,7 +466,8 @@ Ik sta te popelen om nieuwe dingen te leren en het bedrijf te helpen groeien.
     experienceTitle: { en: "Experience", nl: "Ervaring" },
     educationTitle: { en: "Education", nl: "Onderwijs" },
     recommendationsTitle: { en: "Testimonials", nl: "Referenties" },
-    languageToggle: { en: "Verander naar Nederlands", nl: "Switch to English" },
+    languageToggle: { en: "NL", nl: "English" },
     readMore: { en: "Read more", nl: "Verder lezen" },
+    downloadAsPdf: { en: "Download as PDF", nl: "Download als PDF" },
   },
 };

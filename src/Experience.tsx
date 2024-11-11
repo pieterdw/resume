@@ -26,9 +26,19 @@ export const Experience: React.FC<IExperienceProps> = ({
           {" - "}
           {experience.location[lang]}
         </div>
-        <div className="italic text-slate-400">{experience.timespan[lang]}</div>
+        <div className="hidden md:inline print:inline italic text-slate-400">
+          {experience.timespan[lang]}
+        </div>
       </div>
-      <p className="text-sm text-slate-500">{experience.jobTitle[lang]}</p>
+      <p className="">{experience.jobTitle[lang]}</p>
+      {experience.businessDescription[lang] && (
+        <p className="text-sm mt-1 text-slate-500 print:text-slate-400">
+          {experience.businessDescription[lang]}
+        </p>
+      )}
+      <div className="md:hidden print:hidden text-sm text-slate-500 ">
+        {experience.timespan[lang]}
+      </div>
       <ul className="list-disc ml-8 mt-2 mb-4">
         {experience.highlights.map((h, i) => (
           <Fragment key={i}>

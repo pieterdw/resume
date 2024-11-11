@@ -4,20 +4,21 @@ import { resumeData as d, TranslatableKey } from "./resumeData";
 import { Experience } from "./Experience";
 import { Section } from "./Section";
 import { SkillTopic } from "./SkillTopic";
-import { LanguagePicker } from "./LanguagePicker";
+import { Preheader } from "./Preheader";
 import { Header } from "./Header";
 import { Recommendation } from "./Recommendation";
+import { getLanguageFromHash } from "./utils/getLanguageFromHash";
 
 function App() {
-  const [lang, setLang] = useState<TranslatableKey>(
-    (localStorage.getItem("lang") as TranslatableKey) ?? "en"
-  );
+  const [lang, setLang] = useState<TranslatableKey>(getLanguageFromHash());
 
-  const toggleLanguage = () => {
-    const newLang: TranslatableKey = lang === "en" ? "nl" : "en";
-    localStorage.setItem("lang", newLang);
-    setLang(newLang);
-  };
+  useEffect(() => {
+    const onHashChange = () => setLang(getLanguageFromHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+    };
+  }, []);
 
   useEffect(() => {
     console.log(`%c😍 Hi there! `, "color:rgb(14 116 144);font-size:1.3rem;");
@@ -29,12 +30,12 @@ function App() {
 
   return (
     <>
-      <div className="md:my-5 md:mx-5 lg:my-10 lg:mx-auto lg:w-[1024px] md:rounded-2xl px-7 py-6 text-left text-slate-700 shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0 leading-relaxed print:leading-[1.35rem]">
-        <LanguagePicker
-          lang={lang}
-          tooltip={d.ui.languageToggle}
-          onToggleLanguage={toggleLanguage}
-        />
+      <Preheader
+        lang={lang}
+        downloadTranslation={d.ui.downloadAsPdf}
+        languageTranslation={d.ui.languageToggle}
+      />
+      <div className="md:mb-5 md:mx-5 lg:mb-10 lg:mx-auto lg:w-[1024px] md:rounded-2xl px-4 md:px-7 py-6 text-left text-slate-700 bg-white md:shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0 leading-relaxed print:leading-[1.35rem]">
         <Header
           lang={lang}
           name={d.main.name}
