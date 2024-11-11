@@ -34,6 +34,7 @@ function App() {
         lang={lang}
         downloadTranslation={d.ui.downloadAsPdf}
         languageTranslation={d.ui.languageToggle}
+        languageTooltipTranslation={d.ui.languageToggleTooltip}
       />
       <div className="md:mb-5 md:mx-5 lg:mb-10 lg:mx-auto lg:w-[1024px] md:rounded-2xl px-4 md:px-7 py-6 text-left text-slate-700 bg-white md:shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0 leading-relaxed print:leading-[1.35rem]">
         <Header

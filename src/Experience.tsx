@@ -26,7 +26,7 @@ export const Experience: React.FC<IExperienceProps> = ({
           {" - "}
           {experience.location[lang]}
         </div>
-        <div className="hidden md:inline print:inline italic text-slate-400">
+        <div className="md:inline print:inline italic text-slate-400">
           {experience.timespan[lang]}
         </div>
       </div>
@@ -36,9 +36,9 @@ export const Experience: React.FC<IExperienceProps> = ({
           {experience.businessDescription[lang]}
         </p>
       )}
-      <div className="md:hidden print:hidden text-sm text-slate-500 ">
+      {/* <div className="md:hidden print:hidden text-sm mt-1 text-slate-500 print:text-slate-400">
         {experience.timespan[lang]}
-      </div>
+      </div> */}
       <ul className="list-disc ml-8 mt-2 mb-4">
         {experience.highlights.map((h, i) => (
           <Fragment key={i}>
@@ -57,7 +57,7 @@ export const Experience: React.FC<IExperienceProps> = ({
               </li>
             ) : lang === "en" ? (
               <li className="print:hidden">
-                You are still reading? That is amazing, thank you very much.{" "}
+                Are you still reading? That is amazing, thank you very much.{" "}
                 <a
                   onClick={handleExplosion}
                   className="cursor-pointer hover:underline"

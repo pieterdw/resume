@@ -20,6 +20,7 @@ export interface IResumeData {
     educationTitle: ITranslatable;
     recommendationsTitle: ITranslatable;
     languageToggle: ITranslatable;
+    languageToggleTooltip: ITranslatable;
     readMore: ITranslatable;
     downloadAsPdf: ITranslatable;
   };
@@ -76,10 +77,10 @@ export const resumeData: IResumeData = {
 Experience combining different roles: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, software architect, team leader, people manager, devops engineer, product owner, etc. Used to working closely with other teams and clients to deliver high quality products.
 Released first standalone website in 2001, at the age of 14. Started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables. Ever since, building apps has been a passion. 
 Always eager to learn new things and help grow businesses.`,
-    nl: `Veelzijdige full stack web engineer met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webgebaseerde applicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Uitgebreide ervaring in startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
+    nl: `Veelzijdige full stack web engineer met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webapplicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Succesvol in zowel startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
 Ervaring met het combineren van verschillende rollen: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, product owner, etc. Gewend om nauw samen te werken met andere teams en klanten om producten van hoge kwaliteit op te leveren.
 Eerste zelfstandige website uitgebracht in 2001, op 14-jarige leeftijd. Begonnen met het bouwen van websites op GeoCities, toen animated gifs trendy waren en afgeronde hoeken werden gemaakt door afbeeldingen in HTML-tabellen te plaatsen. Sindsdien is het bouwen van apps een passie. 
-Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
+Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
 `,
   },
   skills: [
@@ -178,18 +179,18 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
       business: "Medallia",
       businessDescription: {
         en: "Silicon Valley enterprise, providing the #1 enterprise experience platform for mission critical insights and action",
-        nl: "Silicon Valley enterprise met het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten",
+        nl: "Silicon Valley bedrijf met het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten",
       },
       location: { en: "USA (Remote)", nl: "USA (Thuiswerk)" },
       jobTitle: {
         en: "Senior Staff Software Engineer & Manager",
         nl: "Senior Staff Software Engineer & Manager",
       },
-      timespan: { en: "March 2021 - Present", nl: "Maart 2021 - Nu" },
+      timespan: { en: "2021 - Present", nl: "2021 - Nu" },
       highlights: [
         {
-          en: "Lead a global cross-functional team of 17 engineers across three continents",
-          nl: "Leiding gegeven aan een multidiciplinair team van 17 softwareontwikkelaars en QA engineers",
+          en: "Lead a global cross-functional team of 17 software and QA engineers across three continents",
+          nl: "Leiding gegeven aan een multidiciplinair team van 17 softwareontwikkelaars en QA engineers, verspreid over drie continenten",
         },
         {
           en: "Designed modern app architecture using .NET 8 and ReactJS to improve performance, stability and development speed",
@@ -220,51 +221,51 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
     {
       business: "CheckMarket",
       businessDescription: {
-        en: "Powerful survey software aimed at enterprises",
-        nl: "Krachtige enquêtesoftware voor grote bedrijven",
+        en: "Powerful survey software aimed at enterprises, acquired by Medallia",
+        nl: "Krachtige enquêtesoftware gericht op grote ondernemingen, overgenomen door Medallia",
       },
       location: {
-        en: "Turnhout, Belgium - Acquired by Medallia",
-        nl: "Turnhout, België - Overgenomen door Medallia",
+        en: "Turnhout, Belgium",
+        nl: "Turnhout, België",
       },
       jobTitle: {
         en: "Senior Software Developer & Project Manager",
         nl: "Senior Software Developer & Project Manager",
       },
       timespan: {
-        en: "April 2017 - March 2021",
-        nl: "April 2017 - March 2021",
+        en: "2017 - 2021",
+        nl: "2017 - 2021",
       },
       highlights: [
         {
-          en: "Designed and built flexible reporting solution giving clients full flexibility in building reports that show the most important information, matching their house style",
-          nl: "",
+          en: "Designed and built reporting solution giving clients full flexibility in building reports that show the most important information, matching their house style",
+          nl: "Ontwierp en bouwde een rapportageoplossing die klanten volledige flexibiliteit biedt bij het samenstellen van rapporten die de meest nuttige info naar boven brengen",
           url: "https://www.checkmarket.com/survey-tool/reporting/",
         },
         {
           en: "Built a custom scripting language that clients can use to personalize and enhance their surveys and reports",
-          nl: "",
+          nl: "Een aangepaste scripttaal ontwikkeld die klanten kunnen gebruiken om hun enquêtes en rapporten te personaliseren",
           url: "https://www.checkmarket.com/kb/survey-scripting-language/",
         },
         {
           en: "Proposed and executed several process improvements to speed up development significantly, including CI/CD",
-          nl: "",
+          nl: "Diverse procesverbeteringen voorgesteld en uitgevoerd om de softwareontwikkeling aanzienlijk te versnellen, waaronder CI/CD",
         },
         {
           en: "Implemented COM Interop solution to enable usage of modern .NET code inside Classic ASP apps",
-          nl: "",
+          nl: "COM Interop oplossing geïmplementeerd voor het gebruik van moderne .NET code binnen klassieke ASP apps",
         },
         {
           en: "Designed several impactful UI/UX improvements that made the software more modern and easier to use",
-          nl: "",
+          nl: "Diverse ingrijpende UI/UX-verbeteringen ontworpen die de software moderner en gebruiksvriendelijker maakten",
         },
         {
           en: "Worked directly with clients to better understand their needs, and improved the software based on this feedback",
-          nl: "",
+          nl: "Werkte rechtstreeks met klanten om hun behoeften beter te begrijpen, ter verbetering van de software",
         },
         {
           en: "Fully automated a workflow to set up white label domains, saving staff and clients hundreds of hours every year",
-          nl: "",
+          nl: "Volledig geautomatiseerde workflow gemaakt voor het instellen van white label domeinen, waardoor klanten en medewerkers honderden uren per jaar bespaarden",
         },
       ],
     },
@@ -283,29 +284,29 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
         nl: "Software Developer & IT Manager",
       },
       timespan: {
-        en: "August 2009 - April 2017",
-        nl: "Augustus 2009 - April 2017",
+        en: "2009 - 2017",
+        nl: "2009 - 2017",
       },
       highlights: [
         {
           en: "Lead a project to modernize IT operations for one of Europe's biggest Metal music festivals, building software to scan visitors, register crew, improve communication etc.",
-          nl: "",
+          nl: "Leidde een project om de IT-activiteiten voor een van Europa's grootste metal muziekfestivals te moderniseren, door software te bouwen om bezoekers te scannen, personeel te registreren, communicatie te verbeteren, enz.",
         },
         {
           en: "Designed and implemented UI/UX for several highly used applications",
-          nl: "",
+          nl: "UI/UX ontworpen en geïmplementeerd voor verschillende veelgebruikte applicaties",
         },
         {
-          en: "Lead projects with international teams, delivering high quality innovative features, respecting deadlines and budget",
-          nl: "",
+          en: "Lead projects with international team, delivering high quality innovative features, respecting deadlines and budget",
+          nl: "Internationaal team aangestuurd, met oplevering van hoogkwalitatieve innovaties, binnen budget en deadlines",
         },
         {
           en: "Spent significant time with customers to understand their needs, and implement tailored solutions",
-          nl: "",
+          nl: "Tijd met klanten gespendeerd om hun behoeften te begrijpen en oplossingen op maat te implementeren",
         },
         {
           en: "Implemented several web and mobile apps using modern web technologies",
-          nl: "",
+          nl: "Diverse web- en mobiele apps geïmplementeerd met moderne webtechnologieën",
         },
       ],
     },
@@ -313,7 +314,7 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
       business: "Straffe Koffie",
       businessDescription: {
         en: "Self employed secondary occupation, creating websites and solutions for local businesses",
-        nl: "Zelfstandige in bijberoep, maken van websites en oplossingen voor lokale bedrijven",
+        nl: "Zelfstandige in bijberoep, gericht op websites en oplossingen voor lokale bedrijven",
       },
       location: {
         en: "Oud-Turnhout, Belgium",
@@ -330,29 +331,29 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
       highlights: [
         {
           en: "Built custom WordPress websites for local businesses, mobile friendly and search engine optimized",
-          nl: "",
+          nl: "Bouwen van aangepaste WordPress websites voor lokale bedrijven, mobielvriendelijk en geoptimaliseerd voor zoekmachines",
         },
         {
           en: "Provided reliable CPanel and DirectAdmin web hosting for clients, using Postmark to enhance email deliverability",
-          nl: "",
+          nl: "Betrouwbare CPanel en DirectAdmin webhosting voor klanten, met Postmark om email deliverability te verbeteren",
         },
         {
           en: "easter egg",
           nl: "easter egg",
         },
         {
-          en: `Example: gevelrenovatiesvandun.be: website and logo for local construction business`,
-          nl: "",
+          en: "Example: gevelrenovatiesvandun.be: website and logo for local construction business",
+          nl: "Voorbeeld: gevelrenovatiesvandun.be: website en logo voor bedrijf van gevelrenovaties en reinigingswerken",
           url: "https://gevelrenovatiesvandun.be/",
         },
         {
           en: "Example: justfoods.be: multilingual website for organic food producer",
-          nl: "",
+          nl: "Voorbeeld: justfoods.be: meertalige website voor biologische voedselproducent",
           url: "https://justfoods.be/",
         },
         {
-          en: "Example: barzoen.cafe: website for local bar/restaurant",
-          nl: "",
+          en: "Example: barzoen.cafe: website for local bar/restaurant and concert venue",
+          nl: "Voorbeeld: barzoen.cafe: website voor lokale brasserie en concertlocatie",
           url: "https://barzoen.cafe/",
         },
       ],
@@ -411,7 +412,7 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
       },
       text: {
         en: "I am confident Pieter will make the difference at any company.",
-        nl: "Ik ben ervan overtuigd dat Pieter het verschil zal maken bij elk bedrijf.",
+        nl: "Ik ben ervan overtuigd dat Pieter het verschil zal maken bij eender welk bedrijf.",
       },
       isAvailableOnLinkedIn: false,
       linkedInUrl: "https://www.linkedin.com/in/philippe-van-elst-4750a67/",
@@ -438,8 +439,8 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
         nl: "Teamgenoot bij Medallia",
       },
       text: {
-        en: "I am particularly impressed by Pieter’s ability to do more management work than some actual full-time managers, all on top of doing regular development.",
-        nl: "I am particularly impressed by Pieter’s ability to do more management work than some actual full-time managers, all on top of doing regular development.",
+        en: "I am particularly impressed by Pieter's ability to do more management work than some actual full-time managers, all on top of doing regular development.",
+        nl: "I am particularly impressed by Pieter's ability to do more management work than some actual full-time managers, all on top of doing regular development.",
       },
       isAvailableOnLinkedIn: true,
       linkedInUrl: "https://www.linkedin.com/in/filip-meszaros",
@@ -466,7 +467,11 @@ Altijd enthousiast om nieuwe dingen te leren en bedrijven te helpen groeien.
     experienceTitle: { en: "Experience", nl: "Ervaring" },
     educationTitle: { en: "Education", nl: "Onderwijs" },
     recommendationsTitle: { en: "Testimonials", nl: "Referenties" },
-    languageToggle: { en: "NL", nl: "English" },
+    languageToggle: { en: "NL", nl: "EN" },
+    languageToggleTooltip: {
+      en: "Nederlandstalige versie bekijken",
+      nl: "View English version",
+    },
     readMore: { en: "Read more", nl: "Verder lezen" },
     downloadAsPdf: { en: "Download as PDF", nl: "Download als PDF" },
   },
