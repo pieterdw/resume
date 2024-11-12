@@ -176,17 +176,20 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
   ],
   experience: [
     {
-      business: "Medallia",
+      business: "CheckMarket / Medallia",
       businessDescription: {
-        en: "Silicon Valley enterprise, providing the #1 enterprise experience platform for mission critical insights and action",
-        nl: "Silicon Valley bedrijf met het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten",
+        en: "CheckMarket is an enterprise survey platform, founded in Belgium. In 2021 we got acquired by Medallia, a global leader based in Silicon Valley. Medallia provides the #1 enterprise experience platform for mission critical insights and action.",
+        nl: "CheckMarket is gestart als een Belgisch enquêteplatform. In 2021 werden we overgenomen door Medallia, een wereldleider uit Silicon Valley. Medallia is het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten.",
       },
-      location: { en: "USA (Remote)", nl: "USA (Thuiswerk)" },
+      location: {
+        en: "Remote",
+        nl: "Remote",
+      },
       jobTitle: {
         en: "Senior Staff Software Engineer & Manager",
         nl: "Senior Staff Software Engineer & Manager",
       },
-      timespan: { en: "2021 - Present", nl: "2021 - Nu" },
+      timespan: { en: "2017 - Present", nl: "2017 - Nu" },
       highlights: [
         {
           en: "Lead a global cross-functional team of 17 software and QA engineers across three continents",
@@ -201,43 +204,6 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
           nl: "Samenwerking met management en andere teams om ambitieuze roadmap te plannen en uit te voeren",
         },
         {
-          en: "Created tool to automate multiple repetitive, error-prone tasks for all engineers",
-          nl: "Tool gemaakt om een aantal repetitieve, foutgevoelige taken voor ontwikkelaars te automatiseren",
-        },
-        {
-          en: "Developed high volume email solution to unify email workflows and improve scalability",
-          nl: "Oplossing ontwikkeld voor grote e-mailvolumes, om e-mail workflows te stroomlijnen en de schaalbaarheid te verbeteren",
-        },
-        {
-          en: "Provided mentorship to team members, coaching them to improve code quality and speed",
-          nl: "Mentor en coach voor teamleden, met focus op verbeteren van code-kwaliteit en snelheid",
-        },
-        {
-          en: "Improved software stability and reduced customer reported incidents by 40%",
-          nl: "Verbetering stabiliteit software, escalaties door klanten verminderd met 40%",
-        },
-      ],
-    },
-    {
-      business: "CheckMarket",
-      businessDescription: {
-        en: "Powerful survey software aimed at enterprises, acquired by Medallia",
-        nl: "Krachtige enquêtesoftware gericht op grote ondernemingen, overgenomen door Medallia",
-      },
-      location: {
-        en: "Turnhout, Belgium",
-        nl: "Turnhout, België",
-      },
-      jobTitle: {
-        en: "Senior Software Developer & Project Manager",
-        nl: "Senior Software Developer & Project Manager",
-      },
-      timespan: {
-        en: "2017 - 2021",
-        nl: "2017 - 2021",
-      },
-      highlights: [
-        {
           en: "Designed and built reporting solution giving clients full flexibility in building reports that show the most important information, matching their house style",
           nl: "Ontwierp en bouwde een rapportageoplossing die klanten volledige flexibiliteit biedt bij het samenstellen van rapporten die de meest nuttige info naar boven brengen",
           url: "https://www.checkmarket.com/survey-tool/reporting/",
@@ -246,6 +212,14 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
           en: "Built a custom scripting language that clients can use to personalize and enhance their surveys and reports",
           nl: "Een aangepaste scripttaal ontwikkeld die klanten kunnen gebruiken om hun enquêtes en rapporten te personaliseren",
           url: "https://www.checkmarket.com/kb/survey-scripting-language/",
+        },
+        {
+          en: "Provided mentorship to team members, coaching them to improve code quality and speed",
+          nl: "Mentor en coach voor teamleden, met focus op verbeteren van code-kwaliteit en snelheid",
+        },
+        {
+          en: "Improved software stability and reduced customer reported incidents by 40%",
+          nl: "Verbetering stabiliteit software, escalaties door klanten verminderd met 40%",
         },
         {
           en: "Proposed and executed several process improvements to speed up development significantly, including CI/CD",
@@ -260,20 +234,16 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
           nl: "Diverse ingrijpende UI/UX-verbeteringen ontworpen die de software moderner en gebruiksvriendelijker maakten",
         },
         {
-          en: "Worked directly with clients to better understand their needs, and improved the software based on this feedback",
-          nl: "Werkte rechtstreeks met klanten om hun behoeften beter te begrijpen, ter verbetering van de software",
-        },
-        {
-          en: "Fully automated a workflow to set up white label domains, saving staff and clients hundreds of hours every year",
-          nl: "Volledig geautomatiseerde workflow gemaakt voor het instellen van white label domeinen, waardoor klanten en medewerkers honderden uren per jaar bespaarden",
+          en: "Developed high volume email solution to unify email workflows and improve scalability",
+          nl: "Oplossing ontwikkeld voor verzenden van grote emailvolumes, om e-mail workflows te stroomlijnen en de schaalbaarheid te verbeteren",
         },
       ],
     },
     {
       business: "BMI Leisure",
       businessDescription: {
-        en: "World leader in karting and entertainment center software",
-        nl: "Wereldleider in software voor kartings en entertainment centers",
+        en: "World leader in karting and entertainment center software, offering solutions for all aspects of the business.",
+        nl: "Wereldleider in software voor kartings en entertainment centers, met oplossingen voor alle aspecten van de zaak.",
       },
       location: {
         en: "Geel, Belgium",
@@ -313,8 +283,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
     {
       business: "Straffe Koffie",
       businessDescription: {
-        en: "Self employed secondary occupation, creating websites and solutions for local businesses",
-        nl: "Zelfstandige in bijberoep, gericht op websites en oplossingen voor lokale bedrijven",
+        en: "Self employed secondary occupation, creating websites and solutions for local businesses.",
+        nl: "Zelfstandige in bijberoep, gericht op websites en oplossingen voor lokale bedrijven.",
       },
       location: {
         en: "Oud-Turnhout, Belgium",
