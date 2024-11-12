@@ -66,7 +66,7 @@ export const resumeData: IResumeData = {
   main: {
     name: "Pieter De Witte",
     jobTitle: "Senior Full Stack Developer & Manager",
-    address: { en: "Turnhout, Belgium", nl: "Turnhout, België" },
+    address: { en: "Oud-Turnhout, Belgium", nl: "Oud-Turnhout, België" },
     phone: "+32 472 735 666",
     email: "pieterdewitte@gmail.com",
     websiteUrl: "straffekoffie.com/pieter",
@@ -137,6 +137,7 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         "Jira",
         "Azure DevOps",
         "Git",
+        "GitHub Copilot",
         "Sentry",
         "Adobe Photoshop",
         "SQL Server Management Studio",
@@ -146,7 +147,7 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         "GitHub",
         "GitLab",
       ],
-      otherSkills: ["JMeter", "Adobe Illustrator", "Subversion"],
+      otherSkills: ["JMeter", "Adobe Illustrator"],
     },
     {
       topic: { en: "Soft Skills", nl: "Soft skills" },
