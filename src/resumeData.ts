@@ -65,7 +65,7 @@ export interface IRecommendation {
 export const resumeData: IResumeData = {
   main: {
     name: "Pieter De Witte",
-    jobTitle: "Senior Full Stack Developer & Manager",
+    jobTitle: "Senior Full Stack Developer & Senior Manager",
     address: { en: "Oud-Turnhout, Belgium", nl: "Oud-Turnhout, België" },
     phone: "+32 472 735 666",
     email: "pieterdewitte@gmail.com",
@@ -73,12 +73,12 @@ export const resumeData: IResumeData = {
     linkedInUrl: "linkedin.com/in/pieterdw",
   },
   intro: {
-    en: `Well-rounded full stack web engineer with extensive experience in defining, designing, developing, deploying, maintaining, and managing web-based applications. Over 23 years of experience in web development. Self-motivated, self-taught, dedicated, and results-oriented. Proved myself in startup and enterprise environments. Collaborative and humble attitude, ready to work in lead role or as individual contributor.
+    en: `Well-rounded full stack web engineer and manager with extensive experience in defining, designing, developing, deploying, maintaining, and managing web-based applications. Over 23 years of experience in web development. Self-motivated, self-taught, dedicated, and results-oriented. Proved myself in startup and enterprise environments. Collaborative and humble attitude, ready to work in lead role or as individual contributor.
 Experience combining different roles: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, software architect, team leader, people manager, devops engineer, product owner, etc. Used to working closely with other teams and clients to deliver high quality products.
 Released first standalone website in 2001, at the age of 14. Started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables. Ever since, building apps has been a passion. 
 Always eager to learn new things and help grow businesses.`,
-    nl: `Veelzijdige full stack web engineer met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webapplicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Succesvol in zowel startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
-Ervaring met het combineren van verschillende rollen: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, product owner, etc. Gewend om nauw samen te werken met andere teams en klanten om producten van hoge kwaliteit op te leveren.
+    nl: `Veelzijdige full stack web engineer en manager met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webapplicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Succesvol in zowel startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
+Ervaring met het combineren van verschillende rollen: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, product owner, etc. Gewend om nauw samen te werken met andere teams en klanten om hoogkwalitatieve producten op te leveren.
 Eerste zelfstandige website uitgebracht in 2001, op 14-jarige leeftijd. Begonnen met het bouwen van websites op GeoCities, toen animated gifs trendy waren en afgeronde hoeken werden gemaakt door afbeeldingen in HTML-tabellen te plaatsen. Sindsdien is het bouwen van apps een passie. 
 Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
 `,
@@ -187,8 +187,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         nl: "Remote",
       },
       jobTitle: {
-        en: "Senior Staff Software Engineer & Manager",
-        nl: "Senior Staff Software Engineer & Manager",
+        en: "Senior Staff Software Engineer & Senior Manager",
+        nl: "Senior Staff Software Engineer & Senior Manager",
       },
       timespan: { en: "2017 - Present", nl: "2017 - Nu" },
       highlights: [
@@ -251,8 +251,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         nl: "Geel, België",
       },
       jobTitle: {
-        en: "Software Developer & IT Manager",
-        nl: "Software Developer & IT Manager",
+        en: "Software Developer & Project Manager",
+        nl: "Software Developer & Project Manager",
       },
       timespan: {
         en: "2009 - 2017",
