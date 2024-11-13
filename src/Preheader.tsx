@@ -17,7 +17,9 @@ export const Preheader: React.FC<IPreheaderProps> = ({
   return (
     <div className="mt-6 mb-6 md:mx-5 lg:mx-auto lg:w-[1024px] text-center md:text-right text-slate-700 print:hidden">
       <a
-        href={`Pieter_De_Witte_Resume_${lang.toUpperCase()}.pdf`}
+        href={`Pieter_De_Witte_Resume_${lang.toUpperCase()}.pdf?r=${Math.floor(
+          Math.random() * 1000
+        )}`}
         target="_blank"
         className="px-3 py-1 rounded-2xl bg-slate-100 md:bg-transparent hover:bg-slate-200 hover:text-slate-800 whitespace-nowrap"
       >
