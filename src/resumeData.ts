@@ -100,6 +100,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         "SolidJS",
         "Vite",
         "Parcel",
+        "Bootstrap",
+        "jQuery",
       ],
       otherSkills: ["Accessibility", "NextJS", "Angular", "Webpack"],
     },
