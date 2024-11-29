@@ -8,6 +8,8 @@ import { Preheader } from "./Preheader";
 import { Header } from "./Header";
 import { Recommendation } from "./Recommendation";
 import { getLanguageFromHash } from "./utils/getLanguageFromHash";
+import { Project } from "./Project";
+import { Page } from "./Page";
 
 function App() {
   const [lang, setLang] = useState<TranslatableKey>(getLanguageFromHash());
@@ -36,7 +38,7 @@ function App() {
         languageTranslation={d.ui.languageToggle}
         languageTooltipTranslation={d.ui.languageToggleTooltip}
       />
-      <div className="md:mb-5 md:mx-5 lg:mb-10 lg:mx-auto lg:w-[1024px] md:rounded-2xl px-4 md:px-7 py-6 text-left text-slate-700 bg-white md:shadow-[5px_25px_80px_-15px_rgba(0,0,0,0.2)] print:shadow-none cursor-default print:p-0 print:mt-0 leading-relaxed print:leading-[1.35rem]">
+      <Page>
         <Header
           lang={lang}
           name={d.main.name}
@@ -78,7 +80,17 @@ function App() {
             ))}
           </div>
         </Section>
-      </div>
+      </Page>
+
+      <Page>
+        <div className="md:mt-[-30px] print:mt-[-40px]">
+          <Section title={d.ui.addendumTitle[lang]}>
+            {d.projects.map((p, i) => (
+              <Project key={i} project={p} lang={lang} />
+            ))}
+          </Section>
+        </div>
+      </Page>
     </>
   );
 }

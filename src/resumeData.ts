@@ -13,12 +13,14 @@ export interface IResumeData {
   experience: IExperience[];
   education: IExperience[];
   recommendations: IRecommendation[];
+  projects: IProject[];
   ui: {
     introTitle: ITranslatable;
     skillsTitle: ITranslatable;
     experienceTitle: ITranslatable;
     educationTitle: ITranslatable;
     recommendationsTitle: ITranslatable;
+    addendumTitle: ITranslatable;
     languageToggle: ITranslatable;
     languageToggleTooltip: ITranslatable;
     readMore: ITranslatable;
@@ -60,6 +62,19 @@ export interface IRecommendation {
   isAvailableOnLinkedIn: boolean;
   linkedInUrl: string;
   thumb: string;
+}
+
+export interface IProject {
+  name: string;
+  text: string[];
+  role: string;
+  tech: string;
+  url?: string;
+  category:
+    | "CheckMarket / Medallia"
+    | "BMI Leisure"
+    | "Straffe Koffie"
+    | "Hobby";
 }
 
 export const resumeData: IResumeData = {
@@ -116,7 +131,7 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
         "ASP.NET MVC",
         "Dapper",
       ],
-      otherSkills: [],
+      otherSkills: ["PHP"],
     },
     {
       topic: { en: "Cloud & Others", nl: "Cloud & overige" },
@@ -181,8 +196,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
     {
       business: "CheckMarket / Medallia",
       businessDescription: {
-        en: "CheckMarket is an enterprise survey platform, founded in Belgium. In 2021 we got acquired by Medallia, a global leader based in Silicon Valley. Medallia provides the #1 enterprise experience platform for mission critical insights and action.",
-        nl: "CheckMarket is gestart als een Belgisch enquêteplatform. In 2021 werden we overgenomen door Medallia, een wereldleider uit Silicon Valley. Medallia is het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten.",
+        en: "CheckMarket is an SAAS enterprise survey platform, founded in Belgium. In 2021 we got acquired by Medallia, a global leader based in Silicon Valley. Medallia provides the #1 enterprise experience platform for mission critical insights and action.",
+        nl: "CheckMarket is gestart als een Belgisch SAAS enquêteplatform. In 2021 werden we overgenomen door Medallia, een wereldleider uit Silicon Valley. Medallia is het #1 enterprise experience platform voor ervaringen van klanten, personeel, burgers en patiënten.",
       },
       location: {
         en: "Remote",
@@ -245,8 +260,8 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
     {
       business: "BMI Leisure",
       businessDescription: {
-        en: "World leader in karting and entertainment center software, offering solutions for all aspects of the business.",
-        nl: "Wereldleider in software voor kartings en entertainment centers, met oplossingen voor alle aspecten van de zaak.",
+        en: "World leader in karting and entertainment center software, offering SAAS solutions for all aspects of the business.",
+        nl: "Wereldleider in software voor kartings en entertainment centers, met SAAS oplossingen voor alle aspecten van de zaak.",
       },
       location: {
         en: "Geel, Belgium",
@@ -434,12 +449,41 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
       thumb: "erwin.jfif",
     },
   ],
+  projects: [
+    {
+      name: "CheckMarket ReportBuilder",
+      role: "Design, architecture, frontend development, backend development, CI/CD, infrastructure",
+      tech: "React, TypeScript, Redux, Bootstrap, SASS, C#, ASP.NET Core, Dapper",
+      category: "CheckMarket / Medallia",
+      url: "https://www.checkmarket.com/survey-tool/reporting/",
+      text: [
+        "The CheckMarket ReportBuilder was built to replace an outdated reporting solution. Our clients wanted more ways to visualize data. This required a new solution, built from the ground up.",
+        "I designed and built a reporting solution that was easy to use and still extremely powerful. The UI was built using React and it featured a live preview of changes, and a undo/redo option. Clients could fully customize reports to match their house style using simple controls and even custom CSS.",
+        "The backend was also built by me. I used ASP.NET Core, putting the foundations for many future ASP.NET Core projects. To ensure the user experience is smooth and system performance was good, I implemented several performance optimizations such as lazy loading, bulk saving when idle, etc.",
+      ],
+    },
+    {
+      name: "Custom Domain Automation",
+      role: "Design, frontend development, backend development, AWS integration",
+      tech: "AWS CloudFront, AWS Route53, AWS Simple Email Service, AWS Certificate Manager, C#, ASP.NET Core",
+      category: "CheckMarket / Medallia",
+      text: [
+        "As our client base kept growing, more clients wanted to use a custom domain to personalize their surveys. Setting up those domains was originally a tedious manual process, including lots of back and forth with clients. So I proposed a plan to automate this fully.",
+        "I created a solution that allowed clients to set up a custom domain without any intervention from the engineering team. After providing all details, clients would receive a page with the required DNS records. This overview also contained information about whether the domain was configured already.",
+        "Once clients had configured all DNS records, a process would configure all infrastructure correctly on Amazon Web Services (AWS). After completion, clients could use their domain name to personalize their surveys and emails.",
+      ],
+    },
+  ],
   ui: {
     introTitle: { en: "Intro", nl: "Introductie" },
     skillsTitle: { en: "Skills", nl: "Vaardigheden" },
     experienceTitle: { en: "Experience", nl: "Ervaring" },
     educationTitle: { en: "Education", nl: "Onderwijs" },
     recommendationsTitle: { en: "Testimonials", nl: "Referenties" },
+    addendumTitle: {
+      en: "Addendum: project details",
+      nl: "Addendum: project details",
+    },
     languageToggle: { en: "NL", nl: "EN" },
     languageToggleTooltip: {
       en: "Nederlandstalige versie bekijken",
