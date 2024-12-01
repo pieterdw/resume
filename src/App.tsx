@@ -10,6 +10,7 @@ import { Recommendation } from "./Recommendation";
 import { getLanguageFromHash } from "./utils/getLanguageFromHash";
 import { Project } from "./Project";
 import { Page } from "./Page";
+import { Projects } from "./Projects";
 
 function App() {
   const [lang, setLang] = useState<TranslatableKey>(getLanguageFromHash());
@@ -83,11 +84,9 @@ function App() {
       </Page>
 
       <Page>
-        <div className="md:mt-[-30px] print:mt-[-40px]">
+        <div className="md:mt-[-30px] print:mt-[-34px] break-before-page">
           <Section title={d.ui.addendumTitle[lang]}>
-            {d.projects.map((p, i) => (
-              <Project key={i} project={p} lang={lang} />
-            ))}
+            <Projects projects={d.projects} lang={lang} />
           </Section>
         </div>
       </Page>

@@ -68,14 +68,18 @@ export interface IProject {
   name: string;
   text: string[];
   role: string;
-  tech: string;
+  tech?: string;
+  teamSize?: string;
   url?: string;
-  category:
-    | "CheckMarket / Medallia"
-    | "BMI Leisure"
-    | "Straffe Koffie"
-    | "Hobby";
+  timeSpan: string;
+  category: TProjectCategory;
 }
+
+export type TProjectCategory =
+  | "CheckMarket / Medallia"
+  | "BMI Leisure"
+  | "Straffe Koffie"
+  | "Hobby";
 
 export const resumeData: IResumeData = {
   main: {
@@ -101,7 +105,7 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
   skills: [
     {
       topic: { en: "Programming Languages", nl: "Programmeertalen" },
-      topSkills: ["C#", "JavaScript (ES6+)", "TypeScript", "Microsoft SQL"],
+      topSkills: ["C#", "JavaScript", "TypeScript", "Microsoft SQL"],
       otherSkills: ["PowerShell", "PHP", "MySql", "VBScript", "Firebird SQL"],
     },
     {
@@ -451,26 +455,222 @@ Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
   ],
   projects: [
     {
+      name: "Migration from Classic ASP to .NET 8",
+      role: "Project manager, team lead, architect, product owner, full stack developer, scrum master",
+      teamSize:
+        "8 (2 backend developers, 2 frontend developers, 1 database developer, 1 manual QA, 1 automation QA, and I)",
+      tech: "C#, .NET 8, ASP.NET Core, React, TypeScript, Dapper, MS SQL, Micro frontends",
+      timeSpan: "2021 - 2024",
+      category: "CheckMarket / Medallia",
+      text: [
+        "In order to improve scalability and reduce costs, we set a multi year target to move our software to a cloud agnostic Docker/Kubernetes architecture. The first and initiative was to move from Windows to Linux. This required us to move away from Classic ASP.",
+        "I architected a solution that allowed us to move from Classic ASP to .NET gradually, page by page. This resulted in a regular release cadence and minimal impact on clients.",
+        "The backend was built using ASP.NET Core Razor Pages and WebAPI, using Dapper for data access. The frontend used micro frontends based on React, TypeScript and a in-house component library. I ensured we had building blocks to reduce boilerplate and make development straightforward.",
+        "The team consisted of junior, medior and senior profiles. I implemented processes to give everyone ownership over their work. There were clear guidelines and regular checkins to ensure nobody was blocked.",
+      ],
+    },
+    {
+      name: "New Survey Interface",
+      role: "Project manager, team lead, architect, product owner, full stack engineer (frontend, backend, database)",
+      teamSize:
+        "4 (1 frontend engineer, 1 backend engineer, 1 full stack engineer and I) + external UI development team",
+      tech: "SolidJS, TypeScript, C#, .NET 8, ASP.NET Core, MS SQL, MS Test, Moq, JMeter",
+      timeSpan: "2024",
+      category: "CheckMarket / Medallia",
+      text: [
+        "The survey interface was the most important part of our software. It was used by millions of people every month to respond to surveys. As part of the migration initiative, the survey interface needed to be migrated to .NET 8. Its architecture needed to be future proof to support future growth and development.",
+        "The existing in-house React component library didn't tick the right boxes for this project. We needed something that was fast, light and stylable. I managed to set up a collaboration with the company's UI team to build a new component library for this project, and SolidJS was chosen as the FE library.",
+        "I built several POCs to find the optimal stack and eventually built the frontend, backend and database foundations myself. This resulted in a full end to end prototype that was ready to be worked on by multiple developers. To ensure top quality code, I implemented Test Driven Development (TDD), Dependency Injection, extensive linting, and more. I used load testing early on everything was performant and scalable.",
+      ],
+    },
+    {
+      name: "High Throughput Email Solution",
+      role: "Architect, Developer",
+      teamSize: "2 (1 database engineer and I)",
+      tech: "C#, .NET 8, AWS Simple Email Service, Dapper, MS SQL",
+      timeSpan: "2023",
+      category: "CheckMarket / Medallia",
+      text: [
+        "I architected and implemented a new email solution to replace an outdated and slighly instable system. The new system provided one unified way of handling outgoing emails. Traceability was improved by storing all those emails in a database, replacing temporary files on web servers. By closely integrating with AWS, we were able to link every single bounce and complaint to the original email.",
+        "The solution was highly scalable. Using multiple multi threaded micro services, emails went out nearly instantaneous. The system also ensured that every outgoing email was fully compliant, respecting SPF and DKIM.",
+      ],
+    },
+    {
+      name: "Environmental: Developer Productivity Tool",
+      role: "Developer",
+      tech: "C#, .NET 8, Git",
+      timeSpan: "2022",
+      category: "CheckMarket / Medallia",
+      text: [
+        "After noticing that the team often lost valuable time with repetitive chores, I decided to write a command line tool to automate some of those. This tool handled some configuration and git chores when switching between development environments. It also allowed developers to quickly launch pull requests.",
+      ],
+    },
+    {
       name: "CheckMarket ReportBuilder",
-      role: "Design, architecture, frontend development, backend development, CI/CD, infrastructure",
-      tech: "React, TypeScript, Redux, Bootstrap, SASS, C#, ASP.NET Core, Dapper",
+      role: "Architect, designer, full stack developer (frontend + backend), devops engineer",
+      teamSize: "2 (DB developer and I)",
+      tech: "React, TypeScript, Redux, Bootstrap, SASS, C#, .NET 6, ASP.NET Core, Dapper, Node.js",
+      timeSpan: "2019",
       category: "CheckMarket / Medallia",
       url: "https://www.checkmarket.com/survey-tool/reporting/",
       text: [
         "The CheckMarket ReportBuilder was built to replace an outdated reporting solution. Our clients wanted more ways to visualize data. This required a new solution, built from the ground up.",
-        "I designed and built a reporting solution that was easy to use and still extremely powerful. The UI was built using React and it featured a live preview of changes, and a undo/redo option. Clients could fully customize reports to match their house style using simple controls and even custom CSS.",
-        "The backend was also built by me. I used ASP.NET Core, putting the foundations for many future ASP.NET Core projects. To ensure the user experience is smooth and system performance was good, I implemented several performance optimizations such as lazy loading, bulk saving when idle, etc.",
+        "I designed and built a reporting solution that was easy to use and still extremely powerful. The UI was built as a React Single Page Application. It featured a live preview of changes and a undo/redo option. Clients could fully customize reports to match their house style using simple controls and even custom CSS.",
+        'The backend was built using ASP.NET Core, putting the foundations for many future ASP.NET Core projects. It also featured a "Smart report" option, which created a custom report based on the content of the survey. This shared a lot of code with the UI, so it was built using Node,js.',
+        "To ensure a smooth user experience and fast system performance, there were several performance optimizations such as caching, lazy loading, debounced bulk saving, etc.",
       ],
     },
     {
       name: "Custom Domain Automation",
-      role: "Design, frontend development, backend development, AWS integration",
-      tech: "AWS CloudFront, AWS Route53, AWS Simple Email Service, AWS Certificate Manager, C#, ASP.NET Core",
+      role: "Architect, full stack developer (frontend + backend + database), AWS devops engineer",
+      teamSize: "1",
+      tech: "AWS CloudFront, AWS Route53, AWS Simple Email Service, AWS Certificate Manager, C#, .NET 6, ASP.NET Core, AWS SDK, Bootstrap",
+      timeSpan: "2019",
       category: "CheckMarket / Medallia",
       text: [
-        "As our client base kept growing, more clients wanted to use a custom domain to personalize their surveys. Setting up those domains was originally a tedious manual process, including lots of back and forth with clients. So I proposed a plan to automate this fully.",
-        "I created a solution that allowed clients to set up a custom domain without any intervention from the engineering team. After providing all details, clients would receive a page with the required DNS records. This overview also contained information about whether the domain was configured already.",
-        "Once clients had configured all DNS records, a process would configure all infrastructure correctly on Amazon Web Services (AWS). After completion, clients could use their domain name to personalize their surveys and emails.",
+        "As our client base kept growing, more clients wanted to use a custom domain to personalize their surveys. Setting up those domains was a tedious manual process, including lots of back and forth with clients. To save time, I proposed a plan to automate this fully.",
+        "I created a solution that allowed clients to set up a custom domain without any intervention from the engineering team. After providing all details, clients would receive a page with the required DNS records. This page also indicated whether their DNS records were already correctly configured or not.",
+        "Once clients had configured all DNS records, a background process would configure all infrastructure correctly on Amazon Web Services (AWS). After completion, clients could use their domain name to personalize their surveys and emails.",
+      ],
+    },
+    {
+      name: "Custom Scripting Language (CSL)",
+      role: "Architect, backend developer, database developer",
+      teamSize: "1",
+      tech: "C#, .NET Standard, Handlebars, Dapper, MS SQL",
+      timeSpan: "2019",
+      category: "CheckMarket / Medallia",
+      url: "https://www.checkmarket.com/kb/survey-scripting-language/",
+      text: [
+        "Many clients wanted more personalization and customization options for their surveys. There was an old system with variables but it was limited and the implemenation varied throughout the software.",
+        "I designed a new powerful system with variables and operators, based on Handlebars. This allowed for nested variables and advanced scripting. It was implemented in a uniform way throughout the different product areas: surveys, reports, custom logic, etc. By using COM interop (ClassicBridge), even the Classic ASP code could utilize this scripting language.",
+        "Based on client feedback, this was expanded over time. I added additional operators for UI like tooltips, modals, icons, etc.",
+      ],
+    },
+    {
+      name: "COM Interop between Classic ASP and .NET",
+      role: "Architect, developer, devops engineer",
+      teamSize: "1",
+      tech: "VBScript, Classic ASP, C#, .NET 6, .NET Framework, COM interop, PowerShell",
+      timeSpan: "2019",
+      category: "CheckMarket / Medallia",
+      text: [
+        "The biggest part of our software was still written in Classic ASP, but all new development was done in .NET. We needed to allow Classic ASP to invoke this .NET code as well, but there was no good solution for this.",
+        "I came up with a COM interop solution to expose the full power of our modern .NET Core codebase to Classic ASP, with very limited boilerplate code. This was a big boost to our development speed, since we didn't have to jump through hoops anymore to bring new features to Classic ASP. This was used to bring several impactful features to our Classic ASP code, including CSL, Caching, Email sending, etc.",
+        "By building the right scripting and pipelines around it, deployments were fully automated.",
+      ],
+    },
+    {
+      name: "CI/CD Solution",
+      role: "Architect, devops engineer",
+      teamSize: "1",
+      tech: "Azure DevOps, AWS CodeDeploy, PowerShell, Git",
+      timeSpan: "2017",
+      category: "CheckMarket / Medallia",
+      text: [
+        "To speed up development and releases, I set up Continuous Integration, enabling automatic builds, unit tests, and deployments to our test environments. This was built using PowerShell, and run using Azure DevOps pipelines.",
+        "I also configured Continuous Delivery to production, replacing manual processes like FTP. With the new solution, you could mark a commit for production and it would automatically go live after all checks passed successfully.",
+        "During this process, I also moved all code over from TFVS to Git.",
+      ],
+    },
+    {
+      name: "Music Festival Digitization",
+      role: "Technical Project Lead, developer",
+      teamSize: "10",
+      tech: "C#, .NET Framework, WPF",
+      timeSpan: "2010 - 2012",
+      category: "BMI Leisure",
+      text: [
+        "We took on a challenging project to bring one of Europe's biggest metal music festivals to the digital era. We built and ran software for crew registration, visitor ticket scanning, and more. One of the most visible impact was the software to run all the video screens across the festival terrain. We displayed the line-up, any important information and even live football games.",
+        "As the technical project lead I was involved with building the different apps. I was in close contact with different stakeholders including the festival organizers, to ensure everything went according to plan. During the festival, we ran a editorial team to control all content on the screens.",
+      ],
+    },
+    {
+      name: "Karting Positioning Software",
+      role: "Technical Project Lead, developer, UI designer",
+      teamSize: "2",
+      tech: "C#, .NET Framework, WPF",
+      timeSpan: "~ 2014",
+      category: "BMI Leisure",
+      url: "https://www.bmileisure.com/en/features/safety-positioning-for-karting",
+      text: [
+        "We built a real time kart positioning system. This software had multiple use cases, including safety: if a kart crashed, it would automatically slow down karts approaching the stopped vehicule. It also made it possible for friends to see more easily where everyone was on the track.",
+        "As a technical project lead, I oversaw multiple test setups in karting tracks across Europe. We did trials with different hardware systems to find the perfect match. I worked together with an offshore engineer for the position algorithms, and developed the more visual aspects myself.",
+      ],
+    },
+    {
+      name: "Van Dun: Website and logo design",
+      role: "Web developer, web designer",
+      tech: "WordPress, PHP, SASS, Adobe Photoshop, Adobe Illustrator",
+      timeSpan: "2020",
+      category: "Straffe Koffie",
+      url: "https://gevelrenovatiesvandun.be/",
+      text: [
+        "I designed a house style, including logo for this young home renovation business. It was meant to be a clean, modern design. The website features a few before/after sliders. The website was built using Wordpress, and some customization were built using PHP. Some of the styling was built using SASS.",
+      ],
+    },
+    {
+      name: "Mighty: Website Build and Deployment Library",
+      role: "Developer",
+      tech: "Node.js, TypeScript, Parcel",
+      timeSpan: "2019 - 2020",
+      category: "Straffe Koffie",
+      url: "https://github.com/pieterdw/mighty-web",
+      text: [
+        'To consolidate the code to build and deploy web sites, I built a Node.js library called "Mighty". It uses Parcel to build and minify files. It can also deploy these files to a pre-configured FTP server. This library massively improved the speed of setting up new projects and deploying them.',
+      ],
+    },
+    {
+      name: "Expense Tracker App",
+      role: "Developer, hobbyist",
+      tech: "C#, .NET 8, Spectre",
+      timeSpan: "2022",
+      category: "Hobby",
+      text: [
+        "To track and categorize our expenses, I built a .NET console application. It imports data from our bank and credit card, and allows us to add categories and comments to all expenses. It supports smart rules to automatticaly apply the right categories.",
+        "There's a number of data visualization options to see patterns and timelines.",
+      ],
+    },
+    {
+      name: "Home Automation Enhancements",
+      role: "Developer, hobbyist",
+      tech: "C#, .NET Framework, Loxone, HTTP, TCP, Git",
+      timeSpan: "2014",
+      category: "Hobby",
+      text: [
+        "I built a .NET console application to extend our home automation. For example, it used a API to close the blinds if it got too hot outside, or open them to prevent damage due to an upcoming storm. It could also control our Sonos speaker and third party smart plugs.",
+        "As a result, our house got an infamous Barry White button. When pressed, it would dim the lights and play a Barry White song through the Sonos speaker.",
+      ],
+    },
+    {
+      name: "The Ska Is The Limit: Concert Series",
+      role: "Organiser, artist booker",
+      timeSpan: "2008 - 2012",
+      category: "Hobby",
+      text: [
+        "For five years I organized a concert series in Turnhout (BE), featuring some amazing international artists. These concerts were always very popular, and attracted visitors from far away. I organized everything, ranging from from sponsorships, advertising, artist booking, etc.",
+      ],
+    },
+    {
+      name: "Backstage: Band Management Web App",
+      role: "Developer, hobbyist",
+      tech: "PHP, MySQL, HTML, CSS, JavaScript",
+      timeSpan: "~2007",
+      category: "Hobby",
+      text: [
+        "I was in a ska/reggae/soul band with a total of 11 band members. To help manage everything, I created a web app for all band members to discuss things and keep things organized.",
+        "The web app was built using PHP and used a MySQL database. Among other things it featured a message board, calendar, and all recorded music.",
+      ],
+    },
+    {
+      name: "WebAward.nl: Website Review Service",
+      role: "Developer, hobbyist",
+      tech: "Perl, MySQL, HTML, CSS, JavaScript",
+      timeSpan: "~2001 - 2003",
+      category: "Hobby",
+      text: [
+        "The first web app I built, at the age of 14. Possibly younger, but that's the oldest artefact I found on the Wayback Machine :) People could submit their website to receive a review. Then someone would check their website and give feedback. If the website had a good UI/UX, it could win a golden award. That was an image people could place on their website, and many did! I eventually found some volunteers that helped me out with the reviews.",
+        "This was built using Perl, that was the first language I tought myself. I had fun and learned a lot.",
       ],
     },
   ],

@@ -22,7 +22,7 @@ export const Experience: React.FC<IExperienceProps> = ({
     <div className="break-inside-avoid">
       <div className="flex mt-2">
         <div className="flex-1">
-          <span className="font-semibold">{experience.business}</span>
+          <h3 className="font-semibold inline">{experience.business}</h3>
           {" - "}
           {experience.location[lang]}
         </div>
