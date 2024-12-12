@@ -8,7 +8,6 @@ import { Preheader } from "./Preheader";
 import { Header } from "./Header";
 import { Recommendation } from "./Recommendation";
 import { getLanguageFromHash } from "./utils/getLanguageFromHash";
-import { Project } from "./Project";
 import { Page } from "./Page";
 import { Projects } from "./Projects";
 
@@ -73,6 +72,9 @@ function App() {
           {d.education.map((e, i) => (
             <Experience key={i} experience={e} lang={lang} />
           ))}
+          <p>
+            {d.ui.certificationsTitle[lang]}: {d.educationCertifications}
+          </p>
         </Section>
         <Section title={d.ui.recommendationsTitle[lang]}>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3">
@@ -86,7 +88,7 @@ function App() {
       <Page>
         <div className="md:mt-[-30px] print:mt-[-34px] break-before-page">
           <Section title={d.ui.addendumTitle[lang]}>
-            <Projects projects={d.projects} lang={lang} />
+            <Projects projects={d.projects} />
           </Section>
         </div>
       </Page>

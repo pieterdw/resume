@@ -1,36 +1,37 @@
-import { IProject, TranslatableKey } from "./resumeData";
+import { IProject } from "./resumeData";
 
 export interface IProjectProps {
   project: IProject;
-  lang: TranslatableKey;
 }
 
-export const Project: React.FC<IProjectProps> = ({ project, lang }) => {
+export const Project: React.FC<IProjectProps> = ({ project }) => {
   return (
-    <div className="break-inside-avoid mb-5">
-      <div className="flex mb-2 pt-4">
-        <div className="flex-1">
-          <h3 className="font-semibold inline">{project.name}</h3>
-          {project.url && (
-            <span className="text-slate-500 text-sm print:hidden ml-1">
-              (
-              <a href={project.url} target="_blank" className="underline">
-                link
-              </a>
-              )
-            </span>
-          )}
+    <div className="mb-5">
+      <div className="break-inside-avoid">
+        <div className="flex mb-2 pt-4">
+          <div className="flex-1">
+            <h3 className="font-semibold inline">{project.name}</h3>
+            {project.url && (
+              <span className="text-slate-500 text-sm print:hidden ml-1">
+                (
+                <a href={project.url} target="_blank" className="underline">
+                  link
+                </a>
+                )
+              </span>
+            )}
+          </div>
+          <div className="md:inline print:inline italic text-slate-400">
+            {project.timeSpan}
+          </div>
         </div>
-        <div className="md:inline print:inline italic text-slate-400">
-          {project.timeSpan}
+        <div>
+          {project.text.split("\n").map((text) => (
+            <p className="mb-2">{text}</p>
+          ))}
         </div>
       </div>
-      <div>
-        {project.text.map((text, i) => (
-          <p className="mb-2">{text}</p>
-        ))}
-      </div>
-      <div className="md:grid print:grid grid-cols-[max-content_auto] print:mb-8">
+      <div className="md:grid print:grid grid-cols-[max-content_auto] print:mb-8 break-inside-avoid">
         {project.tech && (
           <>
             <div className="pr-4 text-slate-500 print:text-slate-400">Tech</div>

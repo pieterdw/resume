@@ -1,14 +1,13 @@
 import React from "react";
 import { Project } from "./Project";
-import { IProject, TProjectCategory, TranslatableKey } from "./resumeData";
+import { IProject, TProjectCategory } from "./resumeData";
 import { ProjectFilterButton } from "./ProjectFilterButton";
 
 export interface IProjectsProps {
   projects: IProject[];
-  lang: TranslatableKey;
 }
 
-export const Projects: React.FC<IProjectsProps> = ({ projects, lang }) => {
+export const Projects: React.FC<IProjectsProps> = ({ projects }) => {
   const [category, setCategory] = React.useState<TProjectCategory | undefined>(
     undefined
   );
@@ -36,7 +35,7 @@ export const Projects: React.FC<IProjectsProps> = ({ projects, lang }) => {
       {projects
         .filter((p) => p.category === category || !category)
         .map((p, i) => (
-          <Project key={i} project={p} lang={lang} />
+          <Project key={i} project={p} />
         ))}
     </>
   );
