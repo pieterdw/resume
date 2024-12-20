@@ -481,7 +481,7 @@ The team consisted of junior, medior, and senior profiles. I implemented process
       category: "CheckMarket / Medallia",
       text: `The survey interface was the most important part of our software. It was used by millions of people every month to respond to surveys. As part of the migration initiative, the survey interface needed to be migrated to .NET 8. Its architecture needed to be future proof to support future growth and development.
 The existing in-house React component library didn't tick the right boxes for this project. We needed something that was fast, light and stylable. I managed to set up a collaboration with the company's UI team to build a new component library for this project, and SolidJS was chosen as the FE library.
-I built several POCs to find the optimal stack and eventually built the frontend, backend and database foundations myself. This resulted in a full end to end prototype that was ready to be worked on by multiple developers. To ensure top quality code, I implemented Test Driven Development (TDD), Dependency Injection, extensive linting, and more. I used load testing early on everything was performant and scalable.`,
+I built several POCs to find the optimal stack and eventually built the frontend, backend and database foundations myself. This resulted in a full end to end prototype that was ready to be worked on by multiple developers. To ensure top quality code, I implemented Test Driven Development (TDD), Dependency Injection, extensive linting, and more. I used load testing early on to ensure everything was performant and scalable.`,
     },
     {
       name: "High Throughput Email Solution",
