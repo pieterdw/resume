@@ -31,7 +31,7 @@ export const Project: React.FC<IProjectProps> = ({ project }) => {
           ))}
         </div>
       </div>
-      <div className="md:grid print:grid grid-cols-[max-content_auto] print:mb-8 break-inside-avoid">
+      <div className="grid print:grid grid-cols-[max-content_auto] print:mb-8 break-inside-avoid">
         {project.tech && (
           <>
             <div className="pr-4 text-slate-500 print:text-slate-400">Tech</div>

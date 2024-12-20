@@ -18,7 +18,7 @@ export const Projects: React.FC<IProjectsProps> = ({ projects }) => {
 
   return (
     <>
-      <div className="mt-7 mb-2 print:hidden">
+      <div className="mt-5 md:justify-center flex flex-wrap print:hidden">
         <ProjectFilterButton
           text="All projects"
           onClick={() => setCategory(undefined)}

@@ -10,11 +10,11 @@ export const ProjectFilterButton: React.FC<IProjectFilterButtonProps> = ({
   isActive,
 }) => {
   let className =
-    "px-3 py-1 mr-2 rounded-2xl whitespace-nowrap cursor-pointer select-none ";
+    "px-3 py-1 mr-2 mb-2 text-sm rounded-2xl whitespace-nowrap cursor-pointer select-none ";
   if (isActive) {
     className += "bg-slate-200";
   } else {
-    className += "hover:bg-slate-100 hover:text-slate-800";
+    className += "bg-slate-50 hover:bg-slate-200 hover:text-slate-800";
   }
   return (
     <a onClick={onClick} className={className}>
