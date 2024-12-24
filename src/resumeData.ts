@@ -94,14 +94,14 @@ export const resumeData: IResumeData = {
     linkedInUrl: "linkedin.com/in/pieterdw",
   },
   intro: {
-    en: `Well-rounded full stack web engineer and manager with extensive experience in defining, designing, developing, deploying, maintaining, and managing web-based applications. Over 23 years of experience in web development. Self-motivated, self-taught, dedicated, and results-oriented. Proven myself in startup and enterprise environments. Collaborative and humble attitude, ready to work in a lead role or as an individual contributor.
+    en: `Well-rounded full stack web engineer and manager with extensive experience in defining, designing, developing, deploying, maintaining, and managing web-based applications. Over 23 years of experience in web development. Self-motivated, self-taught, dedicated, and results-oriented. Proven myself in startup and enterprise environments. Team player with a collaborative and humble attitude.
 Experience combining different roles: backend engineer, frontend engineer, database engineer, UI/UX designer, project manager, software architect, team leader, people manager, DevOps engineer, product owner, etc. Used to working closely with other teams and clients to deliver high-quality products.
 Released first standalone website in 2001, at the age of 14. Started building websites on GeoCities, when animated gifs were trendy and rounded corners were built by chopping up images and placing them in HTML tables. Building apps has been a passion ever since.
-Always eager to learn new things and help grow businesses.`,
-    nl: `Veelzijdige full stack web engineer en manager met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webapplicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Succesvol in zowel startup- en enterprise-omgevingen. Constructieve houding, klaar om te werken in een leidende rol of als individuele medewerker.
+Always eager to learn new things and take on challenges.`,
+    nl: `Veelzijdige full stack web engineer en manager met uitgebreide ervaring in het ontwerpen, ontwikkelen, implementeren, onderhouden en beheren van webapplicaties. Meer dan 23 jaar ervaring in webontwikkeling. Gemotiveerd, autodidact, toegewijd en resultaatgericht. Succesvol in zowel startup- en enterprise-omgevingen. Teamspeler met constructieve houding.
 Ervaring met het combineren van verschillende rollen: backend engineer, frontend engineer, database engineer, UI/UX designer, projectmanager, software architect, teamleider, people manager, devops engineer, product owner, etc. Gewend om nauw samen te werken met andere teams en klanten om hoogkwalitatieve producten op te leveren.
 Eerste zelfstandige website uitgebracht in 2001, op 14-jarige leeftijd. Begonnen met het bouwen van websites op GeoCities, toen animated gifs trendy waren en afgeronde hoeken werden gemaakt door afbeeldingen in HTML-tabellen te plaatsen. Sindsdien is het bouwen van apps een passie. 
-Altijd enthousiast om nieuwe dingen te leren, en bedrijven te helpen groeien.
+Altijd enthousiast om nieuwe dingen te leren en het verschil te maken.
 `,
   },
   skills: [
