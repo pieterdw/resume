@@ -1,4 +1,6 @@
 # Pieter's resume
 
-To ensure my resume is mobile friendly and multilangual, I built it as a small React app.
+My resume can be found here: [straffekoffie.com/pieter](https://straffekoffie.com/pieter/)
+
+I built it as a small React/Tailwind app. It is responsive and localized.
 Happy to discuss this in more detail!
