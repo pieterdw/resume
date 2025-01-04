@@ -86,7 +86,7 @@ export type TProjectCategory =
 export const resumeData: IResumeData = {
   main: {
     name: "Pieter De Witte",
-    jobTitle: "Senior Full Stack Developer & Senior Manager",
+    jobTitle: "Senior Full Stack Developer & Manager",
     address: { en: "Oud-Turnhout, Belgium", nl: "Oud-Turnhout, België" },
     phone: "+32 472 735 666",
     email: "pieterdewitte@gmail.com",
