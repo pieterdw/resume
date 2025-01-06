@@ -21,7 +21,7 @@ export const Preheader: React.FC<IPreheaderProps> = ({
           Math.random() * 1000
         )}`}
         target="_blank"
-        className="px-3 py-1 rounded-2xl bg-slate-100 md:bg-transparent hover:bg-white hover:text-slate-800 whitespace-nowrap"
+        className="px-3 py-1 rounded-2xl bg-slate-100 md:bg-transparent hover:bg-slate-200 hover:text-slate-800 whitespace-nowrap"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export const Preheader: React.FC<IPreheaderProps> = ({
       </a>
       <a
         href={"#" + otherLanguage}
-        className="cursor-pointer bg-slate-100 md:bg-transparent px-3 py-1 rounded-2xl hover:bg-white hover:text-slate-800 whitespace-nowrap ml-2"
+        className="cursor-pointer bg-slate-100 md:bg-transparent px-3 py-1 rounded-2xl hover:bg-slate-200 hover:text-slate-800 whitespace-nowrap ml-2"
         title={languageTooltipTranslation[lang]}
       >
         <svg
